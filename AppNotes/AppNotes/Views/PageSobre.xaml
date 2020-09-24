@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppNotes.Views.PageSobre" Title="Sobre">
+    <ContentPage.Content HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Gray">
+        <StackLayout Margin="0,200,0,0" >
+         <Label Text="App Cadastro"
+          TextDecorations="Underline"      
+          FontAttributes="Bold"
+          FontSize="Large"
+          VerticalOptions="Center"
+          HorizontalOptions="Center" />
+            
+            <Label Text="Aplicativo desenvolvido como forma" 
+          FontAttributes="Bold"
+          Margin="10,20,10,0"         
+          FontSize="Large"
+          VerticalOptions="Center"
+          HorizontalOptions="Center" />
+            <Label Text="de aprender a utilizar o Xamarin." 
+          FontAttributes="Bold"
+          FontSize="Large"
+          VerticalOptions="Center"
+          HorizontalOptions="Center" />
+            
+            <Label Text="Desenvolvedor: Jeferson Lucas"
+          FontAttributes="Bold"
+          FontSize="Medium"
+          Margin="0,20,0,0"
+          VerticalOptions="Center"
+          HorizontalOptions="Center" />
+        </StackLayout>
+        </ContentPage.Content>
+</ContentPage>

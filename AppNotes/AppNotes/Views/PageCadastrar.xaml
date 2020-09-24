@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppNotes.Views.PageCadastrar" Title="Cadastro e alteração">
+    <ContentPage.Content>
+     <StackLayout>
+            <Label x:Name="lblTitulo" HorizontalOptions="Center" Margin="20" TextDecorations="Underline" FontSize="25" TextColor="White" Text="Cadastro de usuário"/>
+            <StackLayout>
+                <Label x:Name="lblId" IsVisible="false" Text="Id:"/>
+                <Entry x:Name="txtId" IsVisible="False" IsEnabled="False"/>
+                <Label Text="Nome:" />
+                <Entry x:Name="txtNome" Keyboard="Text" ClearButtonVisibility="WhileEditing" />
+            <Label Text="Sexo:"/>
+                <Entry x:Name="txtSexo" Keyboard="Text" ClearButtonVisibility="WhileEditing" />
+            <!--<RadioButton Text="M"/> Não consegui
+            <RadioButton Text="F"/>-->
+            <Label Text="Nome da mãe:"/>
+                <Entry x:Name="txtNomeMae" Keyboard="Text" ClearButtonVisibility="WhileEditing" />
+            <Label Text="Endereço:"/>
+                <Entry x:Name="txtEnd" Keyboard="Text" ClearButtonVisibility="WhileEditing" />
+            <Label Text="Estado:"/>
+                <Entry x:Name="txtEst" Keyboard="Text" ClearButtonVisibility="WhileEditing" />
+        </StackLayout>
+
+           <StackLayout Orientation="Horizontal" Margin="20,0,20,20">
+                <Button x:Name="btnCads" Text="Cadastrar" BackgroundColor="Green" HorizontalOptions="FillAndExpand" Clicked="btnCads_Clicked" />
+                <Button x:Name="btnExcluir" Text="Excluir" HorizontalOptions="FillAndExpand" Clicked="btnExcluir_Clicked" IsVisible="false" />
+                <Button x:Name="btnVoltar" Text="Voltar" HorizontalOptions="FillAndExpand" Clicked="btnVoltar_Clicked"  IsVisible="false" />
+            </StackLayout>
+     </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppNotes.Views.PageHome" Title="App Cadastrar">
+  
+    <ContentPage.Content >
+        
+        <StackLayout Margin="0,200,0,0">
+            <Label  Text="App Cadastrar"
+          TextDecorations="Underline"      
+          FontAttributes="Bold"
+          TextColor="White"
+          FontSize="Large"
+          VerticalOptions="Center"
+          HorizontalOptions="Center" />
+
+            <Label Text="Aplicativo focado no cadastro," 
+          FontAttributes="Bold"
+          TextColor="White"
+          Margin="10,20,10,0"         
+          FontSize="Large"
+          VerticalOptions="Center"
+          HorizontalOptions="Center" />
+            
+            <Label Text="listagem e localização de" 
+          FontAttributes="Bold"
+          TextColor="White"
+          FontSize="Large"
+          VerticalOptions="Center"
+          HorizontalOptions="Center" />
+            
+            <Label  Text="informações." 
+          FontAttributes="Bold"   
+          TextColor="White"
+          FontSize="Large"
+          VerticalOptions="Center"
+          HorizontalOptions="Center" />
+        </StackLayout>
+        
+    </ContentPage.Content>
+    
+</ContentPage>

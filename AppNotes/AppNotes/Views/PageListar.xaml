@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppNotes.Views.PageListar" Title="Listar Cadastros">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="White" >
+
+
+            <StackLayout Orientation="Horizontal" BackgroundColor="LightGray" Margin="300,5,5,5">
+                <Image x:Name="imgFiltro" Source="filteer.png"  HorizontalOptions="Center" HeightRequest="{OnPlatform iOS=300, Android=65}" WidthRequest="{OnPlatform iOS=300, Android=100}">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer
+                             Tapped="TapGestureRecognizer_Tapped"
+                              NumberOfTapsRequired="1" />
+                        </Image.GestureRecognizers>
+                    </Image>
+
+                    <!--<ImageButton Source="filteer.png"
+                    
+                    HorizontalOptions="Center"
+                    Aspect="AspectFill"
+                    BorderColor="LightGreen"
+                    VerticalOptions="CenterAndExpand"
+                    Clicked="TapGestureRecognizer_Tapped" />-->
+                </StackLayout>
+
+
+            <Label x:Name="lblResult" TextColor="Black" Text="filtro" IsVisible="false"/>
+
+            <ListView x:Name="ListandoCads" HasUnevenRows="True" SeparatorColor="black" Margin="15" ItemSelected="ListandoCads_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout >
+                                <Label TextColor="Black" Text="" />
+                                <Label TextColor="Black" Text="{Binding Id, StringFormat='Código: {0}'}" />
+                                <Label TextColor="Black" Text="{Binding Nome, StringFormat='Nome: {0}'}" />
+                                <Label TextColor="Black" Text="{Binding Sexo, StringFormat='Sexo: {0}'}" />
+                                <Label TextColor="Black" Text="{Binding NomeMae, StringFormat= 'Nome da mãe: {0}' }" />
+                                <Label TextColor="Black" Text="{Binding Endereco, StringFormat='Endereço: {0}'}" />
+                                <Label TextColor="Black" Text="{Binding Estado, StringFormat='Estado: {0}'}" />
+                                <Label TextColor="Black" Text="" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppNotes.Views.PagePrincipal" IsPresented="True">
+
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu" BackgroundColor="white">
+
+            <StackLayout>
+                <StackLayout Orientation="Horizontal" BackgroundColor="#2196f3">
+                    <Image x:Name="imgMenu" Source="menu.png" Margin="290,15,0,15" HorizontalOptions="Start" HeightRequest="{OnPlatform iOS=300, Android=25}" WidthRequest="{OnPlatform iOS=300, Android=30}">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer
+                             Tapped="TapGestureRecognizer_Tapped"
+                              NumberOfTapsRequired="1" />
+                        </Image.GestureRecognizers>
+                    </Image>
+                </StackLayout>
+
+
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="home.png" Margin="10,0,5,0" HorizontalOptions="Center" HeightRequest="{OnPlatform iOS=300, Android=35}" WidthRequest="{OnPlatform iOS=300, Android=35}"/>
+                    <Button x:Name="btnHome" Text="Home" Margin="10" HorizontalOptions="FillAndExpand" Clicked="btnHome_Clicked" />
+                </StackLayout>
+                
+                <StackLayout Orientation="Horizontal" >
+                    <Image Source="addFriend.png" Margin="11,0,5,0" HorizontalOptions="Center" HeightRequest="{OnPlatform iOS=300, Android=35}" WidthRequest="{OnPlatform iOS=300, Android=35}" />
+                    <Button x:Name="btnCadastro" Text="Cadastrar" Margin="10" HorizontalOptions="FillAndExpand" Clicked="btnCadastro_Clicked"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="loupe.png" Margin="11,0,5,0" HorizontalOptions="Center" HeightRequest="{OnPlatform iOS=300, Android=35}" WidthRequest="{OnPlatform iOS=300, Android=35}" />
+                    <Button x:Name="btnListar" Text="Listar" Margin="10" HorizontalOptions="FillAndExpand" Clicked="btnListar_Clicked"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="informationButton.png" Margin="11,0,5,0" HorizontalOptions="Center" HeightRequest="{OnPlatform iOS=300, Android=35}" WidthRequest="{OnPlatform iOS=300, Android=35}" />
+                    <Button x:Name="btnSobre" Text="Sobre" Margin="10" HorizontalOptions="FillAndExpand" Clicked="btnSobre_Clicked"/>
+                </StackLayout>
+                
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    
+    <MasterDetailPage.Detail>
+        <ContentPage Title="Page Principal">
+            <Label x:Name="testeDB" />
+        </ContentPage>
+    </MasterDetailPage.Detail>
+
+</MasterDetailPage>
